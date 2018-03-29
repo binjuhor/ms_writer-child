@@ -6,7 +6,6 @@
  */
 $mts_options = get_option(MTS_THEME_NAME);
 ?>
-
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head itemscope itemtype="http://schema.org/WebSite">
@@ -20,7 +19,6 @@ $mts_options = get_option(MTS_THEME_NAME);
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php wp_head(); ?>
 	<meta property="fb:app_id" content="1843228312373267" />
-<!-meta property="fb:admins" content="669960346516320"-->
 </head>
 	<div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -30,16 +28,7 @@ $mts_options = get_option(MTS_THEME_NAME);
   js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.12&appId=1843228312373267&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-	<!---
-<script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1843228312373267&version=v2.3";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>	
-	
-	-->
+
 <body id="blog" <?php body_class('main'); ?> itemscope itemtype="http://schema.org/WebPage">	   
 	<div class="main-container">
 		<header id="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
@@ -81,15 +70,31 @@ $mts_options = get_option(MTS_THEME_NAME);
 								</div>
 							<?php } ?>
 							<?php if ( $mts_options['mts_header_search'] == '1' ) { ?>
+								<span class="searchbox-icon"><i class="fa fa-search"></i></span>
 								<form method="get" id="searchform" class="searchbox search-form" action="<?php echo esc_attr( home_url() ); ?>" _lpchecked="1">
-							 			<input type="text" name="s" id="s" class="searchbox-input" value="<?php the_search_query(); ?>" <?php if (!empty($mts_options['mts_ajax_search'])) echo ' autocomplete="off"'; ?> />
-							 			<span class="searchbox-icon"><i class="fa fa-search"></i></span>
+							 		<input type="text" name="s" id="s" class="searchbox-input" value="<?php the_search_query(); ?>" <?php if (!empty($mts_options['mts_ajax_search'])) echo ' autocomplete="off"'; ?> />
+							 		<input type="submit" value="<?php esc_html_e("Tìm kiếm","ms_writer");?>">
 					  			</form>
 			 				<?php } ?>
 				  		</div>
   					</div>
 				<?php } ?> 
 				<?php if ( $mts_options['mts_header_section2'] == '1' || !empty($mts_options['mts_header_text'])) { ?>
+					<div class="header-top">
+						<div class="container">
+							<div class="hotnews__box pull-left col-md-6">
+								<span class="hotnews-item">Hot news</span><a href="#">Cách sử dụng Bollinger Band trong phân ... </a>
+							</div>
+							<div class="social-box pull-right col-md-6">
+								<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="social"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="social"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="social"><i class="fa fa-youtube"></i></a>
+								<a href="#"  class="hotnews-item">Liên hệ</a>
+							</div>
+						</div>
+					</div><!--End .header-top-->
+
 					<div id="header">
 						<div class="container">
 							<div class="logo-wrap">
@@ -166,12 +171,7 @@ $mts_options = get_option(MTS_THEME_NAME);
 									<?php } ?>
 								</div>
 							<?php } ?>
-							<?php if ( $mts_options['mts_header_search'] == '1' ) { ?>
-								<form method="get" id="searchform" class="searchbox search-form" action="<?php echo esc_attr( home_url() ); ?>" _lpchecked="1">
-							 			<input type="text" name="s" id="s" class="searchbox-input" value="<?php the_search_query(); ?>" <?php if (!empty($mts_options['mts_ajax_search'])) echo ' autocomplete="off"'; ?> />
-							 			<span class="searchbox-icon"><i class="fa fa-search"></i></span>
-					  			</form>
-			 				<?php } ?>
+							<?php if ( $mts_options['mts_header_search'] == '1' ) { get_search_form( true ); } ?>
 				  		</div>
   					</div>
 				<?php } ?> 
