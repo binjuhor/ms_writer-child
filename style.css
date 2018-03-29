@@ -2755,8 +2755,7 @@ input::-webkit-input-speech-button {
 .btc-search {
   color: #fff;
   cursor: pointer;
-  display: inline-block;
-  padding: 20px 0px 20px; }
+  display: inline-block; }
 
 #btc-mondaysearch {
   position: absolute;
