@@ -27,6 +27,7 @@ get_header(); ?>
 						</div>
 					<?php endforeach; ?>	
 				<?php }?>
+				</div>
 				<?php
 			}?>
 		</div>

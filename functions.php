@@ -10,3 +10,7 @@
     wp_enqueue_script( 'binjuhor_custom_script', get_stylesheet_directory_uri() . '/js/binjuhor.js', 'jquery', '1.0.0', true );
  }
  add_action( 'wp_enqueue_scripts', 'binjuhor_enqueue_js' );
+
+ include (get_stylesheet_directory().'/inc/lastest_post_widget.php');
+  
+ include (get_stylesheet_directory().'/inc/social_widget.php');
