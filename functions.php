@@ -14,4 +14,3 @@
 
  include (get_stylesheet_directory().'/inc/lastest_post_widget.php');
   
- include (get_stylesheet_directory().'/inc/social_widget.php');

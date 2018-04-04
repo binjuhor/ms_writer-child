@@ -3848,8 +3848,6 @@ input::-webkit-input-speech-button {
 	box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.35); 
 	border-top: 5px solid #4cb2ec;
 	display:none;
-	::-moz-selection { background:#fff; }
-	::selection { background: #fff; }
 	&.active{
 		display: block;
 	}
@@ -3992,6 +3990,21 @@ span{
 		font-size:14px;
 		&:hover{
 			text-decoration: underline;
+		}
+	}
+}
+
+.social-box{
+	a{
+		&.social{
+			font-size: 20px;
+			color: #969696;
+			width: 35px;
+			display: inline-block;
+			text-align:center;
+			&:hover{
+				color:#000;
+			}
 		}
 	}
 }

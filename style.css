@@ -2768,10 +2768,6 @@ input::-webkit-input-speech-button {
   box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.35);
   border-top: 5px solid #4cb2ec;
   display: none; }
-  #btc-mondaysearch ::-moz-selection {
-    background: #fff; }
-  #btc-mondaysearch ::selection {
-    background: #fff; }
   #btc-mondaysearch.active {
     display: block; }
   #btc-mondaysearch:after {
@@ -2892,6 +2888,15 @@ span.hotnews-item {
     font-size: 14px; }
     .hotnews__box a:hover {
       text-decoration: underline; }
+
+.social-box a.social {
+  font-size: 20px;
+  color: #969696;
+  width: 35px;
+  display: inline-block;
+  text-align: center; }
+  .social-box a.social:hover {
+    color: #000; }
 
 .widget_wpcom_social_media_icons_widget ul li {
   border: 1px solid #999 !important;
