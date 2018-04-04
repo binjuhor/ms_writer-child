@@ -80,17 +80,32 @@ $mts_options = get_option(MTS_THEME_NAME);
   					</div>
 				<?php } ?> 
 				<?php if ( $mts_options['mts_header_section2'] == '1' || !empty($mts_options['mts_header_text'])) { ?>
-					<div class="header-top">
+					<div class="header-top binjuhor_header">
 						<div class="container">
 							<div class="hotnews__box pull-left col-md-6">
-								<span class="hotnews-item">Hot news</span><a href="#">Cách sử dụng Bollinger Band trong phân ... </a>
+								<?php
+									$args = array( 'showposts' => 5);
+									$hot_news = new WP_Query($args);
+									if ($hot_news->have_posts()) :
+								?>
+								<span class="hotnews-item pull-left"><?php esc_html_e('Hot news','ms_writer');?></span>
+								<div class="binjuhor_hot_news pull-left">
+									<ul id="hotnews_item" class="pull-left">
+										<?php while ($hot_news->have_posts()) : $hot_news->the_post(); ?>
+										<li><a href="<?php echo the_permalink( )?>"> <?php the_title(); ?> </a></li>
+										<?php endwhile;?>
+									</ul>
+								</div>
+								<?php 
+									wp_reset_postdata();
+									endif;?>
 							</div>
 							<div class="social-box pull-right col-md-6">
 								<a href="#" class="social"><i class="fa fa-facebook"></i></a>
 								<a href="#" class="social"><i class="fa fa-twitter"></i></a>
 								<a href="#" class="social"><i class="fa fa-google-plus"></i></a>
 								<a href="#" class="social"><i class="fa fa-youtube"></i></a>
-								<a href="#"  class="hotnews-item">Liên hệ</a>
+								<a href="#"  class="hotnews-item"><?php esc_html_e('Liên hệ','ms_writer');?></a>
 							</div>
 						</div>
 					</div><!--End .header-top-->

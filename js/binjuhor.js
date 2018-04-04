@@ -11,4 +11,11 @@
         }
         return $('#btc-mondaysearch').removeClass('active');
     });
+    
+    var nt_title = $('#hotnews_item').newsTicker({
+        row_height: 30,
+        max_rows: 1,
+        duration: 10000,
+        pauseOnHover: 0
+    });
 })(jQuery)

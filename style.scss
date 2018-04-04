@@ -3822,9 +3822,9 @@ input::-webkit-input-speech-button {
  $imgBig: 399px;
  $smallHeigh: 195px;
  .___top-page{
-	 margin-bottom: 40px;
-	 float: left;
-	 width: 100%;
+	margin-bottom: 40px;
+	float: left;
+	width: 100%;
  }
 
  #page, .container{
@@ -3871,12 +3871,16 @@ input::-webkit-input-speech-button {
 }
 
 .binjuhor_home-slider{
+	width:100%;
+	@media only screen and (min-width: 600px){
+		width:50%;
+	}
     float: left;
-    width:50%;
     min-height: $smallHeigh;
     position: relative;
     overflow: hidden;
 	box-sizing: border-box;
+
 	a{
 		display:block;
 		width:100%;
@@ -3923,12 +3927,17 @@ input::-webkit-input-speech-button {
         }
     }
     &.slider-items__2, &.slider-items__3{
+
+		@media only screen and (min-width: 600px){
+			width:25%;
+		}
         padding-left: 2px;
 		padding-top: 2px;
 		padding-right:5px;
-		width:25%;
 		.slide-title{
-			font-size: 16px;
+			@media only screen and (min-width: 600px){
+				font-size: 16px;
+			}
 		}
         img{
             height:$smallHeigh!important;
@@ -3987,42 +3996,10 @@ span{
 	}
 }
 
-.social-box{
-	a{
-		&.social{
-			font-size: 20px;
-			color: #969696;
-			width: 35px;
-			display: inline-block;
-			text-align:center;
-			&:hover{
-				color:#000;
-			}
-		}
-	}
-}
-
-.apsc-theme-3{
-	.social-icon {
-		border:1px solid #999;
-		width: 100%;
-		height: 30px;
-		line-height:30px;
-		.media-name{
-			display:none!important;
-		}
-	}
-	.apsc-count{
-		&:before{
-			display:none;
-		}
-	}
-} 
-
 .widget_wpcom_social_media_icons_widget{
 	ul{
 		li{
-			border: 1px solid #9999!important;
+			border: 1px solid #999!important;
 			display: inline-block!important;
 			margin-right: 0!important;
 			width: 100%;
@@ -4263,4 +4240,15 @@ span{
       }
     }
   }
+}
+.binjuhor{
+	&_hot_news {
+		height:22px;
+		overflow: hidden;
+	}
+	&_header{
+		@media only screen and (max-width: 600px){
+			display: none;
+		}
+	}
 }

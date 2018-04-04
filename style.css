@@ -2789,12 +2789,15 @@ input::-webkit-input-speech-button {
     margin-right: 5px; }
 
 .binjuhor_home-slider {
+  width: 100%;
   float: left;
-  width: 50%;
   min-height: 195px;
   position: relative;
   overflow: hidden;
   box-sizing: border-box; }
+  @media only screen and (min-width: 600px) {
+    .binjuhor_home-slider {
+      width: 50%; } }
   .binjuhor_home-slider a {
     display: block;
     width: 100%;
@@ -2838,10 +2841,13 @@ input::-webkit-input-speech-button {
   .binjuhor_home-slider.slider-items__2, .binjuhor_home-slider.slider-items__3 {
     padding-left: 2px;
     padding-top: 2px;
-    padding-right: 5px;
-    width: 25%; }
-    .binjuhor_home-slider.slider-items__2 .slide-title, .binjuhor_home-slider.slider-items__3 .slide-title {
-      font-size: 16px; }
+    padding-right: 5px; }
+    @media only screen and (min-width: 600px) {
+      .binjuhor_home-slider.slider-items__2, .binjuhor_home-slider.slider-items__3 {
+        width: 25%; } }
+    @media only screen and (min-width: 600px) {
+      .binjuhor_home-slider.slider-items__2 .slide-title, .binjuhor_home-slider.slider-items__3 .slide-title {
+        font-size: 16px; } }
     .binjuhor_home-slider.slider-items__2 img, .binjuhor_home-slider.slider-items__3 img {
       height: 195px !important; }
   .binjuhor_home-slider.slider-items__3 {
@@ -2887,28 +2893,8 @@ span.hotnews-item {
     .hotnews__box a:hover {
       text-decoration: underline; }
 
-.social-box a.social {
-  font-size: 20px;
-  color: #969696;
-  width: 35px;
-  display: inline-block;
-  text-align: center; }
-  .social-box a.social:hover {
-    color: #000; }
-
-.apsc-theme-3 .social-icon {
-  border: 1px solid #999;
-  width: 100%;
-  height: 30px;
-  line-height: 30px; }
-  .apsc-theme-3 .social-icon .media-name {
-    display: none !important; }
-
-.apsc-theme-3 .apsc-count:before {
-  display: none; }
-
 .widget_wpcom_social_media_icons_widget ul li {
-  border: 1px solid #9999 !important;
+  border: 1px solid #999 !important;
   display: inline-block !important;
   margin-right: 0 !important;
   width: 100%;
@@ -3111,3 +3097,11 @@ span.hotnews-item {
   height: 36px;
   line-height: 38px;
   font-size: 16px; }
+
+.binjuhor_hot_news {
+  height: 22px;
+  overflow: hidden; }
+
+@media only screen and (max-width: 600px) {
+  .binjuhor_header {
+    display: none; } }
