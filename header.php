@@ -101,10 +101,10 @@ $mts_options = get_option(MTS_THEME_NAME);
 									endif;?>
 							</div>
 							<div class="social-box pull-right col-md-6">
-								<a href="#" class="social"><i class="fa fa-facebook"></i></a>
-								<a href="#" class="social"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="social"><i class="fa fa-google-plus"></i></a>
-								<a href="#" class="social"><i class="fa fa-youtube"></i></a>
+								<a href="https://www.facebook.com/btcmonday" class="social" target="_blank"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/btcmonday" class="social" target="_blank"><i class="fa fa-twitter"></i></a>
+								<a href="https://plus.google.com/+BTCmonday-coin" class="social" target="_blank"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="social" style="display:none;" target="_blank"><i class="fa fa-youtube"></i></a>
 								<a href="#"  class="hotnews-item"><?php esc_html_e('Liên hệ','ms_writer');?></a>
 							</div>
 						</div>
